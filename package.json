@@ -1,15 +1,19 @@
 {
   "name": "myproject",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
+    "heroku=postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^12.1.4",
+    "@angular/compiler-cli": "~12.1.0",
     "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",
     "@angular/compiler": "~12.1.0",
@@ -24,7 +28,8 @@
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "~4.3.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.4",
@@ -39,5 +44,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.2"
+  },
+  "engines": {
+    "node": "16.6.1",
+    "npm": "7.20.3"
   }
 }
